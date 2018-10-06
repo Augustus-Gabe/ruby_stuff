@@ -4,8 +4,7 @@ ativo = 1
 lista_tarefas = []
 tarefa = ""
 
-while ativo == 1
- 
+def menu()
   puts
   puts "Escolha uma opção no menu: \n"
   puts '[1] Inserir uma tarefa'
@@ -14,16 +13,23 @@ while ativo == 1
   puts
   print 'Opção escolhida: '
 
-  opcao = gets.to_i
+  gets.to_i
+end
+
+while ativo == 1
+ 
+  opcao = menu()
 
   if opcao == 1
     print 'Digite sua tarefa: '
     tarefa = gets
     puts
     lista_tarefas << tarefa
+    system('clear')
     puts 'Tarefa cadastrada: ' + tarefa
   elsif opcao == 2 
     puts 
+    system('clear')
     puts lista_tarefas
   elsif opcao == 3
     ativo = 0
