@@ -30,7 +30,9 @@ while ativo == 1
   elsif opcao == 2 
     puts 
     system('clear')
-    puts lista_tarefas
+    lista_tarefas.each_with_index {|item, index|
+      puts "##{index + 1} - #{item}"
+    }
   elsif opcao == 3
     ativo = 0
   else
