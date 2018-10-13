@@ -21,7 +21,13 @@ class Task
       end
     end
 
+    def mark_as_done
+        @status = true
+    end
 
+    private
+
+    attr_writer :status
     
 
 
