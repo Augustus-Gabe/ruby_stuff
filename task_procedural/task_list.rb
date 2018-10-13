@@ -1,4 +1,3 @@
-require 'json'
 puts "Bem-vindo ao Task List!" 
 
 ativo = 1
